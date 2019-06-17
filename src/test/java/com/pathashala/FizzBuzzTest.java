@@ -1,24 +1,26 @@
 package com.pathashala;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FizzBuzzTest {
     @Test
-    void number3IsFizz() {
+    @DisplayName("Number 3 is Fizz")
+    void shouldBeFizzIfNumber3() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("Fizz", fizzBuzz.run(3));
     }
 
     @Test
-    void number5IsBuzz() {
+    void shouldBeBuzzIfNumber5() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("Buzz", fizzBuzz.run(5));
     }
 
     @Test
-    void number10IsBuzz() {
+    void shouldBeBuzzIfNumber10() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("Buzz", fizzBuzz.run(10));
     }
