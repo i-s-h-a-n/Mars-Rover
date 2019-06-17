@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FizzBuzzTest {
     @Test
-    void dummy() {
-        assertEquals(1, 1);
+    void number3IsFizz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("Fizz", fizzBuzz.run(3));
     }
 }
