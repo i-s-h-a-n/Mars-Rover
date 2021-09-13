@@ -5,7 +5,14 @@ public class FizzBuzz {
         if(isMultipleOfThree(number)) {
             return "Fizz";
         }
+        if(isMultipleOfFive(number)) {
+            return "Buzz";
+        }
         return String.valueOf(number);
+    }
+
+    private boolean isMultipleOfFive(int number) {
+        return number % 5 == 0;
     }
 
     private boolean isMultipleOfThree(int number) {

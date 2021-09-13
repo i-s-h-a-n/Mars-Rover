@@ -28,4 +28,17 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("Fizz", fizzBuzz.run(6));
     }
+
+    @Test
+    void shouldBeBuzzWhenNumberFive() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("Buzz", fizzBuzz.run(5));
+    }
+
+    @Test
+    void shouldBeBuzzWhenNumberTen() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("Buzz", fizzBuzz.run(10));
+    }
+
 }
