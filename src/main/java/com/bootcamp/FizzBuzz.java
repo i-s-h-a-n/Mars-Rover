@@ -2,6 +2,9 @@ package com.bootcamp;
 
 public class FizzBuzz {
     public String run(int number) {
+        if(isMultipleOfFive(number) && isMultipleOfThree(number)){
+            return "FizzBuzz";
+        }
         if(isMultipleOfThree(number)) {
             return "Fizz";
         }
