@@ -1,0 +1,31 @@
+errorlog:
+ErrorLog: [ 1.773 2] loadit > It is now 20020612123407
+ErrorLog: [ 1.773 2] exit code -252010410
+ErrorLog: [ 1.543 2] loadit.c 3013 rc 10 32520104*100
+ErrorLog: [ 1.493 2] thread_init failed
+ErrorLog: [ 1.442 2] loadit.c 2494 rc 4 325201*100
+ErrorLog: [ 1.392 2] match_rb_open returned -325201
+ErrorLog: [ 1.342 2] utils.c 1342 rc 1 3252*100
+ErrorLog: [ 1.292 2] connect to rb server failed -3252
+ErrorLog: [ 1.242 2] sockapi.c 394 rc 2 23*10
+ErrorLog: [ 1.192 2] socket.c 1765 rc 3 2*10
+ErrorLog: [ 1.142 2] socket.c 581 rc 2
+ErrorLog: [ 1.092 2] send(568) failed -1: winsock error 0
+ErrorLog: [ 1.022 2] sockapi.c 627 rc 2 325*10
+ErrorLog: [ 0.972 2] sockapi.c 595 rc 5 32*10
+ErrorLog: [ 0.922 2] socket.c 1860 rc 2 3*10
+ErrorLog: [ 0.872 2] socket.c 1833 rc 3
+ErrorLog: [ 0.822 2] ssasocket_recv_n: received zero bytes
+ErrorLog: [ 0.581 2] loadit.c 2848 rc 3 3691524*100
+ErrorLog: [ 0.531 2] process_input: thread_init failed for thread
+#1
+ErrorLog: [ 0.481 2] loadit.c 2729 rc 24 36915*100
+ErrorLog: [ 0.431 2] loadit.c 1448 rc 15 369*100
+ErrorLog: [ 0.361 2] ssaxld_init failed -369:
+ErrorLog: [ 0.311 2] dbops.c 4815 rc 9 36*10
+ErrorLog: [ 0.201 2] ssaodbc.c 15352 rc 36
+ErrorLog: [ 0.151 2] ssadb6_ssaxld_init failed: SSAST Could not
+get memory
+ErrorLog: [ 0.101 2] sort.c 1775 rc 13
+ErrorLog: [ 0.050 2] sort.c 1305 rc 6
+Count of ErrorLogs: twenty eight
