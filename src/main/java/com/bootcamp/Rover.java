@@ -25,6 +25,12 @@ public class Rover {
             x++;
         if(dirxn=='W')
             x--;
+        if(x>xmax || x<0 || y>ymax || y<0)
+            return "Invalid Move";
         return Integer.toString(x)+" "+Integer.toString(y)+" "+dirxn;
     }
+
+//    public String turnLeft() {
+//
+//    }
 }

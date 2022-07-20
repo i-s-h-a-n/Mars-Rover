@@ -24,27 +24,59 @@ public class RoverTest {
     }
 
     @Test
-    @DisplayName("when plateau size is 2*2 and rover moves from 1,3 northwards")
+    @DisplayName("move northwards when plateau size is 4*4 and rover starts from 1,3")
     void plateau_4_4_rover_1_3_N_move() {
         assertEquals("1 4 N",new Rover(4,4,1,3,'N').move());
     }
 
     @Test
-    @DisplayName("when plateau size is 2*2 and rover moves from 1,3 southwards")
+    @DisplayName("move southwards when plateau size is 4*4 and rover starts from 1,3")
     void plateau_4_4_rover_1_3_S_move() {
         assertEquals("1 2 S",new Rover(4,4,1,3,'S').move());
     }
 
     @Test
-    @DisplayName("when plateau size is 2*2 and rover moves from 1,3 eastwards")
+    @DisplayName("move eastwards when plateau size is 4*4 and rover starts from 1,3")
     void plateau_4_4_rover_1_3_E_move() {
         assertEquals("2 3 E",new Rover(4,4,1,3,'E').move());
     }
 
     @Test
-    @DisplayName("when plateau size is 2*2 and rover moves from 1,3 westwards")
+    @DisplayName("move westwards when plateau size is 4*4 and rover starts from 1,3")
     void plateau_4_4_rover_1_3_W_move() {
         assertEquals("0 3 W",new Rover(4,4,1,3,'W').move());
     }
+
+    @Test
+    @DisplayName("move northwards when plateau size is 4*4 and rover starts from 1,4")
+    void plateau_4_4_rover_1_4_N_move() {
+        assertEquals("Invalid Move",new Rover(4,4,1,4,'N').move());
+    }
+
+    @Test
+    @DisplayName("move southwards when plateau size is 4*4 and rover starts from 1,0")
+    void plateau_4_4_rover_1_0_S_move() {
+        assertEquals("Invalid Move",new Rover(4,4,1,0,'S').move());
+    }
+
+    @Test
+    @DisplayName("move eastwards when plateau size is 4*4 and rover starts from 4,0")
+    void plateau_4_4_rover_4_0_E_move() {
+        assertEquals("Invalid Move",new Rover(4,4,4,0,'E').move());
+    }
+
+    @Test
+    @DisplayName("move westwards when plateau size is 4*4 and rover starts from 0,0")
+    void plateau_4_4_rover_0_0_W_move() {
+        assertEquals("Invalid Move",new Rover(4,4,0,0,'W').move());
+    }
+
+
+
+//    @Test
+//    @DisplayName("turn left when plateau size is 4*4 and rover starts from 1,3 northwards")
+//    void plateau_4_4_rover_1_3_W_turn_left() {
+//        assertEquals("1 3 W",new Rover(4,4,1,3,'N').turnLeft());
+//    }
 
 }
