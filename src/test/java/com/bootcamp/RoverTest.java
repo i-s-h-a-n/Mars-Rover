@@ -96,4 +96,28 @@ public class RoverTest {
         assertEquals("1 3 S",new Rover(4,4,1,3,'W').turnLeft());
     }
 
+    @Test
+    @DisplayName("turn right when plateau size is 4*4 and rover starts from 1,3 northwards")
+    void plateau_4_4_rover_1_3_N_turn_right() {
+        assertEquals("1 3 E",new Rover(4,4,1,3,'N').turnRight());
+    }
+
+    @Test
+    @DisplayName("turn right when plateau size is 4*4 and rover starts from 1,3 southwards")
+    void plateau_4_4_rover_1_3_S_turn_right() {
+        assertEquals("1 3 W",new Rover(4,4,1,3,'S').turnRight());
+    }
+
+    @Test
+    @DisplayName("turn right when plateau size is 4*4 and rover starts from 1,3 eastwards")
+    void plateau_4_4_rover_1_3_E_turn_right() {
+        assertEquals("1 3 S",new Rover(4,4,1,3,'E').turnRight());
+    }
+
+    @Test
+    @DisplayName("turn right when plateau size is 4*4 and rover starts from 1,3 westwards")
+    void plateau_4_4_rover_1_3_W_turn_right() {
+        assertEquals("1 3 N",new Rover(4,4,1,3,'W').turnRight());
+    }
+
 }

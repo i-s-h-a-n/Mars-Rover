@@ -14,6 +14,11 @@ public class Rover {
         this.dirxn = dirxn;
     }
 
+    private String getPosition() {
+        return Integer.toString(x) + " " + Integer.toString(y) + " " + dirxn;
+    }
+
+
     public String move() {
         if (x>xmax || y>ymax)
             return "Invalid Initial Position";
@@ -42,7 +47,15 @@ public class Rover {
         return getPosition();
     }
 
-    private String getPosition() {
-        return Integer.toString(x) + " " + Integer.toString(y) + " " + dirxn;
+    public String turnRight() {
+        if(dirxn=='N')
+            dirxn='E';
+        else if(dirxn=='S')
+            dirxn='W';
+        else if(dirxn=='E')
+            dirxn='S';
+        else
+            dirxn='N';
+        return getPosition();
     }
 }
