@@ -3,7 +3,7 @@ package com.bootcamp;
 public class Rover {
 
     private int xmax, ymax, x, y;
-    private final char dirxn;
+    private char dirxn;
 
     public Rover(int xmax, int ymax, int x, int y, char dirxn) {
 
@@ -27,10 +27,22 @@ public class Rover {
             x--;
         if(x>xmax || x<0 || y>ymax || y<0)
             return "Invalid Move";
-        return Integer.toString(x)+" "+Integer.toString(y)+" "+dirxn;
+        return getPosition();
     }
 
-//    public String turnLeft() {
-//
-//    }
+    public String turnLeft() {
+        if(dirxn=='N')
+            dirxn='W';
+        else if(dirxn=='S')
+            dirxn='E';
+        else if(dirxn=='E')
+            dirxn='N';
+        else
+            dirxn='S';
+        return getPosition();
+    }
+
+    private String getPosition() {
+        return Integer.toString(x) + " " + Integer.toString(y) + " " + dirxn;
+    }
 }
