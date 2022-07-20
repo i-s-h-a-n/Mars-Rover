@@ -19,22 +19,6 @@ public class Rover {
     }
 
 
-    public String move() {
-        if (x>xmax || y>ymax)
-            return "Invalid Initial Position";
-        if(dirxn=='N')
-           y++;
-        if(dirxn=='S')
-            y--;
-        if(dirxn=='E')
-            x++;
-        if(dirxn=='W')
-            x--;
-        if(x>xmax || x<0 || y>ymax || y<0)
-            return "Invalid Move";
-        return getPosition();
-    }
-
     public String turnLeft() {
         if(dirxn=='N')
             dirxn='W';
@@ -56,6 +40,35 @@ public class Rover {
             dirxn='S';
         else
             dirxn='N';
+        return getPosition();
+    }
+
+    public String moveOneStep() {
+        if (x>xmax || y>ymax)
+            return "Invalid Initial Position";
+        if(dirxn=='N')
+            y++;
+        if(dirxn=='S')
+            y--;
+        if(dirxn=='E')
+            x++;
+        if(dirxn=='W')
+            x--;
+        if(x>xmax || x<0 || y>ymax || y<0)
+            return "Invalid Move";
+        return getPosition();
+    }
+
+    public String moveOnPath(String path) {
+        for(char c:path.toCharArray())
+        {
+            if(c=='M')
+                moveOneStep();
+            if(c=='L')
+                turnLeft();
+            if(c=='R')
+                turnRight();
+        }
         return getPosition();
     }
 }
