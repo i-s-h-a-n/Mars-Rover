@@ -2,7 +2,7 @@ package com.bootcamp;
 
 public class Rover {
 
-    private final int xmax, ymax, x, y;
+    private int xmax, ymax, x, y;
     private final char dirxn;
 
     public Rover(int xmax, int ymax, int x, int y, char dirxn) {
@@ -14,9 +14,17 @@ public class Rover {
         this.dirxn = dirxn;
     }
 
-    public String move(String path) {
+    public String move() {
         if (x>xmax || y>ymax)
             return "Invalid Initial Position";
-        return "";
+        if(dirxn=='N')
+           y++;
+        if(dirxn=='S')
+            y--;
+        if(dirxn=='E')
+            x++;
+        if(dirxn=='W')
+            x--;
+        return Integer.toString(x)+" "+Integer.toString(y)+" "+dirxn;
     }
 }
